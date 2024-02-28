@@ -2,10 +2,12 @@
 
 namespace App\Models\FactoryMethod\Services;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\FactoryMethod\Interfaces\PaymentInterface;
 
-class DaviplataService extends Model
+class DaviplataService implements PaymentInterface
 {
-    use HasFactory;
+    public function applyPay()
+    {
+        return "Daviplata processed the payment correctly!";
+    }
 }
